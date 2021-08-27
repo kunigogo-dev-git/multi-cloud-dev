@@ -1,12 +1,15 @@
 FROM gitpod/workspace-full
 
 USER root
-# for zeit now
+# for vercel 
 RUN ["npm", "install", "-g", "http-server"]
-RUN ["npm", "install", "-g", "now"]
+RUN ["npm", "install", "-g", "vercel"]
 
 # for netlify-lambda
 RUN ["npm", "install", "-g", "netlify-lambda"]
+
+# cloudflare workers
+RUN ["npm", "install", "-g", "@cloudflare/wrangler"]
 
 # for heroku cli
 RUN curl https://cli-assets.heroku.com/install.sh | sh

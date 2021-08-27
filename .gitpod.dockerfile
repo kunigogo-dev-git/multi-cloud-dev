@@ -8,9 +8,6 @@ RUN ["npm", "install", "-g", "vercel"]
 # for netlify-lambda
 RUN ["npm", "install", "-g", "netlify-lambda"]
 
-# cloudflare workers
-RUN ["npm", "install", "-g", "@cloudflare/wrangler"]
-
 # for heroku cli
 RUN curl https://cli-assets.heroku.com/install.sh | sh
 RUN chown -R gitpod:gitpod /home/gitpod/.cache/heroku
@@ -22,3 +19,8 @@ RUN chown -R gitpod:gitpod /home/gitpod/.bluemix
 RUN chown -R gitpod:gitpod /home/gitpod/.bluemix/plugins
 
 USER gitpod
+
+
+# cloudflare workers
+RUN ["npm", "install", "@cloudflare/wrangler"]
+

@@ -22,5 +22,5 @@ USER gitpod
 
 
 # cloudflare workers
-RUN ["npm", "install", "@cloudflare/wrangler"]
+RUN ["npm", "install", "-g", "@cloudflare/wrangler"]
 
